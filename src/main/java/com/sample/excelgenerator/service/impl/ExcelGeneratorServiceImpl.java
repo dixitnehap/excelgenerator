@@ -110,7 +110,7 @@ public class ExcelGeneratorServiceImpl implements ExcelGeneratorService {
             outputStream = new BufferedOutputStream(response.getOutputStream());
         }else {
             MediaType mediaType = MediaType.parseMediaType("application/vnd.ms-excel");
-            File file = new File(filePath+fileName);
+            File file = new File(filePath+"//"+fileName);
             file.createNewFile();
             outputStream = new FileOutputStream(file);
         }
